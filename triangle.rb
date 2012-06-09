@@ -14,7 +14,22 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  #Lets handle crap triangles
+  if a < 0 or b < 0 or c < 0
+    raise TriangleError, "Sides can't be a negative length"
+  end
+
+  if a == 0 or b == 0 or c == 0
+    raise TriangleError, "Sides can't be zero length"
+  end
+
+  if a == b and b == c
+    return :equilateral
+  elsif a==b or b==c or a==c
+    return :isosceles
+  else
+    return :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
