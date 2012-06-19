@@ -17,12 +17,17 @@ def triangle(a, b, c)
   #Lets handle crap triangles
   if a < 0 or b < 0 or c < 0
     raise TriangleError, "Sides can't be a negative length"
-  end
-
-  if a == 0 or b == 0 or c == 0
+  elsif a == 0 or b == 0 or c == 0
     raise TriangleError, "Sides can't be zero length"
+  elsif a >= (c + b)
+    raise TriangleError, "Sides are impossible lengths"
+  elsif b >= (a + c)
+    raise TriangleError, "Sides are impossible lengths"
+  elsif c >= (a + b)
+    raise TriangleError, "Sides are impossible lengths"
   end
 
+  
   if a == b and b == c
     return :equilateral
   elsif a==b or b==c or a==c
