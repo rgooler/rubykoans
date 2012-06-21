@@ -31,6 +31,9 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 
 def score(dice)
   # You need to write this method
+  total = 0
+
+  return total
 end
 
 class AboutScoringProject < EdgeCase::Koan
