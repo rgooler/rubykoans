@@ -40,6 +40,7 @@ def score(dice)
   dice.each { |d| rolled[d] += 1 }
 
   total += rolled[5] * 50
+  total += rolled[1] * 100
   return total
 end
 
