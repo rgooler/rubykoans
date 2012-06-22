@@ -41,6 +41,10 @@ def score(dice)
 
   total += rolled[5] * 50
   total += rolled[1] * 100
+  if rolled[1] == 3
+    #Triple 1s get 1000 points total. But we already gave it 300
+    total += 700
+  end
   return total
 end
 
