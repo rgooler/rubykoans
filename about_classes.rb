@@ -33,7 +33,7 @@ class AboutClasses < EdgeCase::Koan
       fido.name
     end
 
-    assert_raise(___) do
+    assert_raise(SyntaxError) do
       eval "fido.@name"
       # NOTE: Using eval because the above line is a syntax error.
     end
