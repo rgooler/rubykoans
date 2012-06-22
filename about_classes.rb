@@ -119,11 +119,13 @@ class AboutClasses < EdgeCase::Koan
   end
 
   def test_args_to_new_must_match_initialize
-    assert_raise(___) do
+    assert_raise(ArgumentError) do
       Dog6.new
     end
     # THINK ABOUT IT:
     # Why is this so?
+    #
+    # Because the name does not have a default value
   end
 
   def test_different_objects_have_different_instance_variables
