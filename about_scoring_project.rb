@@ -43,18 +43,18 @@ def score(dice)
   total += rolled[1] * 100
 
   #Triple 1s get 1000 points total. But we already gave it 300
-  if    rolled[1] == 3
+  if    rolled[1] >= 3
     total += 700
-  elsif rolled[2] == 3 
+  elsif rolled[2] >= 3 
     total += 200
-  elsif rolled[3] == 3 
+  elsif rolled[3] >= 3 
     total += 300
-  elsif rolled[4] == 3 
+  elsif rolled[4] >= 3 
     total += 400
   #Triple 5s get 500 points total. But we already gave it 150
-  elsif rolled[5] == 3 
+  elsif rolled[5] >= 3 
     total += 350
-  elsif rolled[6] == 3 
+  elsif rolled[6] >= 3 
     total += 600
   end
   
