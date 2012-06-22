@@ -101,7 +101,7 @@ class AboutClasses < EdgeCase::Koan
     fido = Dog5.new
 
     fido.name = "Fido"
-    assert_equal __, fido.name
+    assert_equal "Fido", fido.name
   end
 
   # ------------------------------------------------------------------
@@ -115,7 +115,7 @@ class AboutClasses < EdgeCase::Koan
 
   def test_initialize_provides_initial_values_for_instance_variables
     fido = Dog6.new("Fido")
-    assert_equal __, fido.name
+    assert_equal "Fido", fido.name
   end
 
   def test_args_to_new_must_match_initialize
