@@ -32,7 +32,14 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 def score(dice)
   # You need to write this method
   total = 0
+  if dice == []
+    return total
+  end
 
+  rolled = Hash.new(0)
+  dice.each { |d| rolled[d] += 1 }
+
+  total += rolled[5] * 50
   return total
 end
 
