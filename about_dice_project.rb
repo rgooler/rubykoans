@@ -10,7 +10,7 @@ class DiceSet
   attr_accessor :values 
   
   def roll(dice)
-    @values = [1,2,3,4,5]
+    @values = dice.times.map{rand(6)}
   end
 end
 
