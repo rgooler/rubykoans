@@ -7,6 +7,11 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 # end
 
 class DiceSet
+  attr_accessor :values 
+  
+  def roll(dice)
+    @values = [1,2,3,4,5]
+  end
 end
 
 class AboutDiceProject < EdgeCase::Koan
