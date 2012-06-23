@@ -6,6 +6,9 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 #   code ...
 # end
 
+class DiceSet
+end
+
 class AboutDiceProject < EdgeCase::Koan
   def test_can_create_a_dice_set
     dice = DiceSet.new
