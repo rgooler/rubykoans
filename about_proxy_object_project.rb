@@ -16,16 +16,22 @@ class Proxy
   def initialize(target_object)
     @object = target_object
     @messages = []
+    @called = Hash.new(false)
     # ADD MORE CODE HERE
   end
 
   def method_missing(method_name, *args, &block)
     @messages += [method_name]
+    @called[method_name] = true
     @object.__send__(method_name, *args, &block)
   end
 
   def messages()
     @messages
+  end
+
+  def called?(method)
+    @called[method]
   end
 
 end
